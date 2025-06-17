@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda de Contactos</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="agenda-box">
+     <h1 class="titulo"><i class="fas fa-address-book"></i> Agenda de Contactos</h1>
+
+      <form id="contactForm">
+        <div class="input-container">
+          <i class="fas fa-user"></i>
+          <input type="text" id="nombre" placeholder="Nombre" required>
+        </div>
+        <div class="input-container">
+          <i class="fas fa-user-friends"></i>
+          <input type="text" id="apellido" placeholder="Apellido" required>
+        </div>
+        <div class="input-container">
+          <i class="fas fa-phone"></i>
+          <input type="text" id="telefono" placeholder="Teléfono" required>
+        </div>
+        <button type="submit">Agregar Contacto</button>
+      </form>
+
+      <div id="message-box" class="message-box"></div>
+      <button id="mostrarBtn">Mostrar Contactos</button>
+    </div>
+    
+    <div id="contactModal" class="contact-modal hidden">
+      <button id="closeModalBtn" class="close-btn"><i class="fas fa-times"></i></button>
+      <h2 class="subtitulo">📋 Contactos Guardados</h2>
+      <ul id="contactList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
